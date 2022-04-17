@@ -2,6 +2,27 @@
 def addiction(x,y):
     result=x+y
     print(result)
+    
+def extraction(x,y):
+    result=x-y
+    print(result)
+    
+def multiplication(x,y):
+    result=0
+    for i in range(0, y):
+        #print(x)
+        result=x+result
+    print(result)
+    
+def division(x,y):
+    result=x/y
+    print(result)
+    
+def power(x,y):
+    result=1
+    for i in range(0, y, 1):
+        result=x*result
+    print(result)
 
 #added to return to start in case of error.
 while True:
@@ -11,25 +32,20 @@ while True:
     
     #We asked the user to enter an operator
     operator=input("Operator (+,-,/,*,**): ")
-    result=1
-    result2=0
+
+
     #check is the operator is correct or not
     if operator == "+" or operator == "-"or operator =="*" or operator =="/" or operator =="**" :
         if operator == "+":
             addiction(first_number,second_number)
         elif operator =="-":
-            result=first_number-second_number
-            print(result)
+            extraction(first_number,second_number)
         elif operator =="*":
-            for x in range(0, second_number):
-                result2=first_number+result2
-            print(result2)
+            multiplication(first_number,second_number)
         elif operator =="**":
-            for x in range(0, second_number, 1):
-                result=first_number*result
-            print(result)
+            power(first_number,second_number)
         else:
-            result=first_number/second_number
+            division(first_number,second_number)
     #error in choosing wrong operator
     else:
         print("Operator is wrong! Please try again")
