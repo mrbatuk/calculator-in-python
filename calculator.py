@@ -1,3 +1,8 @@
+#added to function
+def addiction(x,y):
+    result=x+y
+    print(result)
+
 #added to return to start in case of error.
 while True:
     #We asked the user to enter a number.
@@ -11,8 +16,7 @@ while True:
     #check is the operator is correct or not
     if operator == "+" or operator == "-"or operator =="*" or operator =="/" or operator =="**" :
         if operator == "+":
-            result=first_number+second_number
-            print(result)
+            addiction(first_number,second_number)
         elif operator =="-":
             result=first_number-second_number
             print(result)
@@ -26,9 +30,6 @@ while True:
             print(result)
         else:
             result=first_number/second_number
-        
-
-        
     #error in choosing wrong operator
     else:
         print("Operator is wrong! Please try again")
